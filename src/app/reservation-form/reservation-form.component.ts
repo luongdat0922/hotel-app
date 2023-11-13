@@ -15,7 +15,7 @@ export class ReservationFormComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
     private reservationService: ReservationService,
-    private router: Router, 
+    private router: Router,
     private activatedRoute: ActivatedRoute) {
 
   }
@@ -42,7 +42,7 @@ export class ReservationFormComponent implements OnInit {
 
   onSubmit() {
     if (this.reservationForm.valid) {
-      
+
       let reservation: Reservation = this.reservationForm.value;
 
       let id = this.activatedRoute.snapshot.paramMap.get('id');
